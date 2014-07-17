@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    
+
+    <com.androidplot.xy.XYPlot
+        android:id="@+id/plot"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_below = "@+id/wTimer"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        androidPlot.title="Memory and Voltage Plot"
+            androidPlot.domainLabel="Time"
+            androidPlot.rangeLabel="Memory and Voltage"
+            
+            androidPlot.titleWidget.labelPaint.textSize="@dimen/title_font_size"
+            androidPlot.domainLabelWidget.labelPaint.textSize="@dimen/domain_label_font_size"
+            androidPlot.rangeLabelWidget.labelPaint.textSize="@dimen/range_label_font_size"
+            androidPlot.graphWidget.marginTop="20dp"
+            androidPlot.graphWidget.marginLeft="15dp"
+            androidPlot.graphWidget.marginBottom="25dp"
+            androidPlot.graphWidget.marginRight="10dp"
+            androidPlot.graphWidget.rangeLabelPaint.textSize="@dimen/range_tick_label_font_size"
+            androidPlot.graphWidget.rangeOriginLabelPaint.textSize="@dimen/range_tick_label_font_size"
+            androidPlot.graphWidget.domainLabelPaint.textSize="@dimen/domain_tick_label_font_size"
+            androidPlot.graphWidget.domainOriginLabelPaint.textSize="@dimen/domain_tick_label_font_size"
+            androidPlot.legendWidget.textPaint.textSize="@dimen/legend_text_font_size"
+            androidPlot.legendWidget.iconSizeMetrics.heightMetric.value="0dp"
+            androidPlot.legendWidget.iconSizeMetrics.widthMetric.value="0dp"
+            androidPlot.legendWidget.heightMetric.value="0dp"
+            androidPlot.legendWidget.positionMetrics.anchor="right_bottom"
+            androidPlot.graphWidget.gridLinePaint.color="#000000"
+        
+         />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/battery4" />
+
+    <TextView
+        android:id="@+id/batterylevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/imageView1"
+        android:layout_below="@+id/imageView1"
+        android:gravity="center"
+        android:text="-" />
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="-" />
+
+    <TextView
+        android:id="@+id/TempDisp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/duration"
+        android:layout_alignBottom="@+id/duration"
+        android:layout_alignLeft="@+id/imageView3"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="-" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/batterylevel"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/voltage" />
+
+    <TextView
+        android:id="@+id/VoltDisp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/availMem"
+        android:layout_alignBottom="@+id/availMem"
+        android:layout_alignLeft="@+id/imageView5"
+        android:layout_alignRight="@+id/imageView5"
+        android:gravity="center"
+        android:text="-" />
+
+    <TextView
+        android:id="@+id/availMem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/imageView4"
+        android:layout_below="@+id/imageView4"
+        android:gravity="center"
+        android:text="-" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/batterylevel"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/duration" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/VoltDisp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/cores" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/VoltDisp"
+        android:layout_alignLeft="@+id/imageView2"
+        android:src="@drawable/realvoltage" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView8"
+        android:layout_alignTop="@+id/imageView2"
+        android:src="@drawable/temp" />
+
+    <TextView
+        android:id="@+id/cores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/VoltDisp"
+        android:layout_alignBottom="@+id/VoltDisp"
+        android:layout_alignLeft="@+id/imageView8"
+        android:layout_alignRight="@+id/imageView3"
+        android:gravity="center"
+        android:text="-" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/VoltDisp"
+        android:layout_alignTop="@+id/imageView6"
+        android:src="@drawable/bluetooth" />
+
+    <TextView
+        android:id="@+id/bluetoothstatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/wifistatus"
+        android:layout_alignLeft="@+id/imageView7"
+        android:layout_alignRight="@+id/imageView7"
+        android:gravity="center"
+        android:text="-"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cores"
+        android:layout_alignTop="@+id/imageView7"
+        android:src="@drawable/timestamp" />
+
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bluetoothstatus"
+        android:layout_alignLeft="@+id/imageView9"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="-"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/wifi" />
+
+    <TextView
+        android:id="@+id/wifistatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/imageView6"
+        android:layout_below="@+id/imageView6"
+        android:gravity="center"
+        android:text="-"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/wTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/cores"
+        android:layout_below="@+id/bluetoothstatus"
+        android:gravity="center"
+        android:text=" " />
+
+</RelativeLayout>
